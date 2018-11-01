@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--
+Module Code    : CMT112
+Module Title   : Web Application Development
+Lecturer       : Dr Martin Chorley
+Student Name   : Sachin Galahitiya
+Student Number : c1877565
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="Assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+  <title>Ponty Bridge University</title>
+
+</head>
+
+<body onload="checkScreen()" onresize="onWindowChange()">
+  <!--
+        The stying for the code below was taken from w3 Schools
+        accessed 2018-10-20
+        https://www.w3schools.com/howto/howto_js_sidenav.asp
+
+        I have used my own methods written in javascript to
+        show and hide the menu on device screen size change.
+
+-->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="./index.html">Home</a>
+    <a href="Components/StudyPage/StudyPage.html">Study</a>
+    <a href="Components/ResearchPage/researchPage.html">Research</a>
+  </div>
+  <div id="topNavBar" class="wrapnavbar">
+    <div class="navbar">
+      <a href="./index.html">Home</a>
+      <a href="Components/StudyPage/StudyPage.html">Study</a>
+      <a href="Components/ResearchPage/researchPage.html">Research</a>
+    </div>
+  </div>
+
+  <span id="sidemenu" onclick="openNav() "> &#9776; </span>
+  <div id="heading" class="header">
+        <a class="clear" href="./index.html"> University of ponty Bridge</a>
+  </div>
+
+  <div class="container">
+    <!--
+      title:  Chicago City Lights At Night Photo
+      licence: CC
+      author:  Mitul Shah
+      author_link: https://burst.shopify.com/@typicalmitul
+      image_link: https://burst.shopify.com/photos/chicago-city-lights-at-night
+    -->
+    <img src="Assets/img/ChicagoCityLightsAtNightPhoto.jpg" alt="UniversityMain" style="width:100%; height:50%">
+    <div class="centered"> Welcome to a desirable locally global University
+      <div class="centersub">
+        With over 700 students enrolling each year from all over the local world
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="cardContainerText">
+          <!--
+            title:  books shelving library reading
+            licence: CC
+            author:  PactoVisual
+            author_link: https://pixabay.com/en/users/PactoVisual-3246936/
+            image_link: https://pixabay.com/en/books-shelving-library-reading-1680953/
+          -->
+          <img src="Assets/img/study.jpg" alt="Avatar" style="width:100%">
+          <div class="top-left-card">
+            <div class="CardTitle">Pushing the boundaries of Higher education</div>
+            <div class="CardSubTitle">
+              We teach many students each year, and almost all of them achieve some level of qualification
+              with over <div class="CardHighlight">1%</div> Graduating with <div class="CardHighlight"> 1st class</div> honors degrees
+            </div>
+            <div class="CardFooter"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 right">
+      <div class="card">
+        <div class="cardContainerText">
+          <!--
+            title:  Hospital laboratory
+            licence: CC
+            author:  DarkoStojanovic
+            author_link: https://pixabay.com/en/users/DarkoStojanovic-638422/
+            image_link: https://pixabay.com/en/medic-hospital-laboratory-medical-563423/
+          -->
+          <img src="Assets/img/researchnews.jpg" alt="Avatar" style="width:100%">
+          <div class="top-left-card">
+            <div class="CardTitle">Research where it matters,</br> almost....</div>
+            <div class="CardSubTitle">
+              With over <div class="CardHighlight">ONE</div> breakthrough each year, our estimate is that we'll have a nobel prize sometime in <div class="CardHighlight"> 2345</div> For sure!
+            </div>
+            <div class="CardFooter"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--
+      title: MOC: Mill's Introduction
+      licence: CC BY 2.0
+      author: Brixelated
+      author_link: https://www.flickr.com/photos/156159384@N02/
+      image_link: https://www.flickr.com/photos/156159384@N02/35615946535/
+    -->
+  <div class="container">
+    <img src="Assets/img/35615946535_074579f70e_o.jpg" alt="Snow" style="width:100%; height:50%">
+    <div class="quote"> I look back on my time here fondly as a time when I could afford to buy things<div class="quoteSubText">Evelyn. Q. Dot, class of 2018</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="card">
+        <!--
+          title: You wish to join the Dark Side?
+          licence: CC BY-SA 2.0
+          author: Chris Isherwood
+          author_link: https://www.flickr.com/photos/isherwoodchris/
+          image_link: https://www.flickr.com/photos/isherwoodchris/7074633375/
+        -->
+        <img src="Assets/img/sports.jpg" alt="Avatar" style="width:100%">
+        <div class="newscontainer">
+          <div class="NewsTitle">  Victory at inter-university games </div>
+          <div class="NewsSubtitle">
+            Once again the University has triumphed at the inter-university games
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <!--
+        title: Jörn, Silke and Mo
+        licence: CC BY-NC 2.0
+        author: nolnet
+        author_link: https://www.flickr.com/photos/nolnet/
+        image_link: https://www.flickr.com/photos/nolnet/4368698058
+        -->
+        <img src="Assets/img/graduates.jpg" alt="Avatar" style="width:100%">
+        <div class="newscontainer">
+          <div class="NewsTitle"> Graduation Success </div>
+          <div class="NewsSubtitle">  Another bumper year of graduates head out into the world </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <!--
+        title: Miniland_LegoLand
+        licence: CC BY-NC 2.0
+        author: James F Clay
+        author_link: https://www.flickr.com/photos/jamesclay/
+        image_link: https://www.flickr.com/photos/nolnet/14905981935
+        -->
+        <img src="Assets/img/webdevlecturer.jpg" alt="Avatar" style="width:100%">
+        <div class="newscontainer">
+            <div class="NewsTitle">Staff rewarded </div>
+          <div class="NewsSubtitle"> Excellent Web Apps lecturer rewarded with luxury villa </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <ul>
+      <li><a class="clear" href="./index.html">Home</a></li>
+      <li><a class="clear" href="Components/StudyPage/StudyPage.html">Study</a></li>
+      <li><a class="clear" href="Components/ResearchPage/researchPage.html">Research</a></li>
+    </ul>
+
+    <div class="footerStyle"> Copyright University of ponty Bridge 2018</div>
+
+  </div>
+  <script>
+    /*
+      function onWindowChange listens to the event trigger
+      onresize of the page body, this function was written to
+      show and hide the side menu bar, with respective to device
+    */
+    function onWindowChange() {
+      console.log("onWindowChange triggerd checkkkk");
+      /*
+        predefined javascript functions outerWidth and outerHeight
+        were used to determine the changing screensize of the device.
+        accordingly I have set a minimum width of 790px, where if the
+        display width is less than 790px the script will hide the the
+        top menu bar and show the side bar toggle 'menu icon'.
+
+        this was achieved with the help of the 'visibility and display'
+        css properties
+      */
+
+      var width = window.outerWidth;
+      var height = window.outerHeight;
+
+      if (width > 790) {
+        document.getElementById("sidemenu").style.visibility = "hidden";
+        document.getElementById("topNavBar").style.display = "block";
+      } else {
+        document.getElementById("sidemenu").style.visibility = "visible";
+        document.getElementById("topNavBar").style.display = "none";
+      }
+    }
+    /*
+      Check screen function was written to initially determine the screen size
+      of the users' device inorder to show and hide the side menu.
+    */
+
+    function checkScreen() {
+      var width = window.outerWidth;
+      if (width < 790) {
+        document.getElementById("sidemenu").style.visibility = "visible";
+        document.getElementById("topNavBar").style.display = "none";
+      }
+
+    }
+    /*
+        Opening and closing of the side menu,
+        The code below was taken from w3 Schools accessed 2018-10-20
+        https://www.w3schools.com/howto/howto_js_sidenav.asp
+        I have used my own methods written in javascript to
+        show and hide the menu on device screen size change.
+   */
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+</body>
+
+</html>

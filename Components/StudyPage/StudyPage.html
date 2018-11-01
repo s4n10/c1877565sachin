@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!--
+Module Code    : CMT112
+Module Title   : Web Application Development
+Lecturer       : Dr Martin Chorley
+Student Name   : Sachin Galahitiya
+Student Number : c1877565
+-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../Assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+  <title>Ponty Bridge University</title>
+
+</head>
+  <!--
+
+    functions checkScreen() and onWindowChange() were written to
+    determine the user screen by listening to the onload and onresize events
+
+    code functionality and further use explained below on the function
+    declaration.
+
+   !-->
+
+
+<body onload="checkScreen()" onresize="onWindowChange()">
+
+  <!--
+        The stying for the code below was taken from w3 Schools
+        accessed 2018-10-20
+        https://www.w3schools.com/howto/howto_js_sidenav.asp
+
+        I have used my own methods written in javascript to
+        show and hide the menu on device screen size change.
+
+-->
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a>Menu</a>
+    <a href="../../index.html">Home</a>
+    <a href="./StudyPage.html">Study</a>
+    <a href="../ResearchPage/researchPage.html">Research</a>
+  </div>
+
+  <div id="topNavBar" class="wrapnavbar">
+    <div class="navbar">
+      <a href="../../index.html">Home</a>
+      <a href="./StudyPage.html">Study</a>
+      <a href="../ResearchPage/researchPage.html">Research</a>
+    </div>
+  </div>
+
+  <span id="sidemenu" onclick="openNav() "> &#9776; </span>
+  <div id="heading" class="header">
+    <a class="clear" href="../../index.html"> University of ponty Bridge</a>
+  </div>
+
+  <div id="heading" class="subheading">
+    Study
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <!--
+          title: You wish to join the Dark Side?
+          licence: CC BY-SA 2.0
+          author: Chris Isherwood
+          author_link: https://www.flickr.com/photos/isherwoodchris/
+          image_link: https://www.flickr.com/photos/isherwoodchris/7074633375/
+        -->
+        <img src="../../Assets/img/StudyPageCourseOne.jpg" alt="Avatar" style="width:100%">
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card">
+        <div class="cardContainerText">
+          <div class="CardTitleResearch"> Dark Side 101 (Practicals Only) </div>
+          <div class="CardSubTitleResearch"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div id="SwapElementOne" class="col-6">
+      <div class="card">
+        <div class="cardContainerText">
+          <div class="CardTitleResearch"> Protable Atomic Fire arm study </div>
+          <div class="CardSubTitleResearch"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. </div>
+        </div>
+      </div>
+    </div>
+    <div id="SwapElementTwo" class="col-6">
+      <div class="card">
+        <!--
+        title: Jörn, Silke and Mo
+        licence: CC BY-NC 2.0
+        author: nolnet
+        author_link: https://www.flickr.com/photos/nolnet/
+        image_link: https://www.flickr.com/photos/nolnet/4368698058
+        -->
+        <img src="../../Assets/img/StudyPageCourseTwo.jpg" alt="Avatar" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+          <!--
+          title: Legoland Miniland
+          licence: CC BY-NC 2.0
+          author: James F Clay
+          author_link: https://www.flickr.com/photos/jamesclay/
+          image_link: https://www.flickr.com/photos/jamesclay/14905981935
+          -->
+        <img src="../../Assets/img/studyThree.jpg" alt="Avatar" style="width:100%">
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card">
+        <div class="cardContainerText">
+          <div class="CardTitleResearch"> Modular City Buliding </div>
+          <div class="CardSubTitleResearch"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <ul>
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="./StudyPage.html">Study</a></li>
+      <li><a href="../ResearchPage/researchPage.html">Research</a></li>
+    </ul>
+    <div class="footerStyle">University of ponty Bridge</div>
+  </div>
+  <script>
+
+    var FirstElement = 0;
+
+    /*
+      function onWindowChange listens to the event trigger
+      onresize of the page body, this function was written to
+      show and hide the side menu bar, with respective to device
+    */
+
+    function onWindowChange() {
+      console.log("onWindowChange triggerd");
+    /*
+      predefined javascript functions outerWidth and outerHeight
+      were used to determine the changing screensize of the device.
+      accordingly I have set a minimum width of 790px, where if the
+      display width is less than 790px the script will hide the the
+      top menu bar and show the side bar toggle 'menu icon'.
+
+      this was achieved with the help of the 'visibility and display'
+      css properties
+    */
+
+      var width = window.outerWidth;
+      var height = window.outerHeight;
+      doSwap(width);
+
+      if (width > 790) {
+        document.getElementById("sidemenu").style.visibility = "hidden";
+        document.getElementById("topNavBar").style.display = "block";
+      } else {
+        document.getElementById("sidemenu").style.visibility = "visible";
+        document.getElementById("topNavBar").style.display = "none";
+      }
+    }
+    /*
+      Check screen function was written to initially determine the screen size
+      of the users' device inorder to show and hide the side menu.
+    */
+    function checkScreen() {
+      var width = window.outerWidth;
+      if (width < 790) {
+        doSwap(width);
+        document.getElementById("sidemenu").style.visibility = "visible";
+        document.getElementById("topNavBar").style.display = "none";
+      }
+    }
+    /*
+        Opening and closing of the side menu,
+        The code below was taken from w3 Schools accessed 2018-10-20
+        https://www.w3schools.com/howto/howto_js_sidenav.asp
+        I have used my own methods written in javascript to
+        show and hide the menu on device screen size change.
+   */
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+
+    /*
+        As illustrated on the site prototype wireframes, the Study page
+        and research page articles were requested to be in the order of
+
+        (FOR THE DESKTOP)
+
+        Article 1
+
+        Left Picture and Right text
+
+        Article 2
+
+        Right picture and left text
+
+        Article 3
+
+        Left picture and right text.
+
+        (FOR MOBILE)
+
+        Article 1,2,3
+        in the order of
+        Picture on the top and
+        Text on the bottom
+
+        In order to do make the layout change seamless for the mobile,
+        The doSwap method and swapDiv methods were written to swap the div
+        elements on right to the left to provide a more even mobile layout
+        on the screensize change.
+
+        A more detailed explaination of this function is explained on the
+        validation document page :
+
+    */
+
+    function doSwap(width) {
+      if(width < 790){
+        if( FirstElement === "SwapElementTwo"){
+          console.log("LESS THAN 790 BUT DOING NOTHING")
+          return;
+        }
+        else{
+          FirstElement= "SwapElementTwo"
+          swapDiv(document.getElementById("SwapElementTwo"), document.getElementById("SwapElementOne"));
+        }
+      }
+      if(width > 790){
+        if(FirstElement === 0 || FirstElement === "SwapElementOne"){
+          return;
+        }
+        else{
+          FirstElement= "SwapElementOne"
+          swapDiv(document.getElementById("SwapElementOne"), document.getElementById("SwapElementTwo"));
+        }
+      }
+    }
+
+
+  function swapDiv(element1, element2) {
+      var parent2 = element2.parentNode;
+      var next2 = element2.nextSibling;
+      if (next2 === element1) {
+          parent2.insertBefore(element1, element2);
+      } else {
+          element1.parentNode.insertBefore(element2, element1);
+          if (next2) {
+              parent2.insertBefore(element1, next2);
+          } else {
+              parent2.appendChild(element1);
+          }
+      }
+  }
+
+  </script>
+</body>
+
+</html>
